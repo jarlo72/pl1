@@ -41,7 +41,6 @@ function initMap() {
 }
 
 function calculateAndDisplayRoute(directionsService, directionsRenderer) {
-  const selectedMode = document.getElementById("mode").value;
 
   directionsService
     .route({
@@ -50,11 +49,11 @@ function calculateAndDisplayRoute(directionsService, directionsRenderer) {
       // Note that Javascript allows us to access the constant
       // using square brackets and a string value as its
       // "property."
-      waypoints: [
-        { lat: 43.476, lng: -80.525 },
-        { lat: 43.469, lng: -80.484 }],
-      optimizeWaypoints: true,
-      travelMode: google.maps.TravelMode[selectedMode],
+      //waypoints: [
+      //  { lat: 43.476, lng: -80.525 },
+      //  { lat: 43.469, lng: -80.484 }],
+      // optimizeWaypoints: true,
+      travelMode: google.maps.TravelMode.DRIVING,
     })
     .then((response) => {
       directionsRenderer.setDirections(response);
