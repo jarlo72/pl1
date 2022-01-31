@@ -41,7 +41,8 @@ function initMap() {
 }
 
 function calculateAndDisplayRoute(directionsService, directionsRenderer) {
-
+  const selectedMode = document.getElementById("mode").value;
+  
   directionsService
     .route({
       origin: { lat: 43.472, lng: -80.537},
@@ -53,7 +54,7 @@ function calculateAndDisplayRoute(directionsService, directionsRenderer) {
       //  { lat: 43.476, lng: -80.525 },
       //  { lat: 43.469, lng: -80.484 }],
       // optimizeWaypoints: true,
-      travelMode: google.maps.TravelMode.DRIVING,
+      travelMode: google.maps.TravelMode[selectedMode],
     })
     .then((response) => {
       directionsRenderer.setDirections(response);
