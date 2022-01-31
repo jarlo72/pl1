@@ -20,7 +20,7 @@ function initMap() {
     content: contentString,
   });
   const marker = new google.maps.Marker({
-    position: "ChIJ816IxAb0K4gRYpbXJOgIt1Y",
+    position: { lat: 43.472095, lng: -80.537387},
     map,
     title: "Shawerma Plus",
   });
