@@ -52,7 +52,7 @@ function calculateAndDisplayRoute(directionsService, directionsRenderer) {
       // "property."
       waypoints: [
         { lat: 43.476, lng: -80.525 },
-        { lat: 43.469, lng: -80.484 },],
+        { lat: 43.469, lng: -80.484 }],
       optimizeWaypoints: true,
       travelMode: google.maps.TravelMode[selectedMode],
     })
