@@ -45,14 +45,14 @@ function calculateAndDisplayRoute(directionsService, directionsRenderer) {
 
   directionsService
     .route({
-      origin: {lat: 43.472095, lng: -80.537387},
-      destination: {lat: 43.463241, lng: -80.466575},
+      origin: { lat: 37.77, lng: -122.447 },
+      destination: {lat: 43.463, lng: -80.466},
       // Note that Javascript allows us to access the constant
       // using square brackets and a string value as its
       // "property."
       waypoints: [
-        { location: lat: 43.476090, lng: -80.525549 },
-        { location: lat: 43.469166, lng: -80.484820 },],
+        { location: lat: 43.476, lng: -80.525 },
+        { location: lat: 43.469, lng: -80.484 },],
       optimizeWaypoints: true,
       travelMode: google.maps.TravelMode[selectedMode],
     })
