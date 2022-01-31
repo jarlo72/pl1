@@ -52,8 +52,8 @@ function calculateAndDisplayRoute(directionsService, directionsRenderer) {
       // "property."
       waypoints: [
         { location: "Mozy's Shawarma, Waterloo, ON" },
-        { location: "Zay Zaman Restaurant, Waterloo, ON" },
-      ],
+        { location: "Zay Zaman Restaurant, Waterloo, ON" },],
+      optimizeWaypoints: true,
       travelMode: google.maps.TravelMode[selectedMode],
     })
     .then((response) => {
