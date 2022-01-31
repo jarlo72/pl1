@@ -34,8 +34,8 @@ function initMap() {
   });  
   
   directionsRenderer.setMap(map);
-  directionsDisplay.setMap(map);
-  directionsDisplay.setOptions( { suppressMarkers: true } );
+  // directionsDisplay.setMap(map);
+  // directionsDisplay.setOptions( { suppressMarkers: true } );
   
   calculateAndDisplayRoute(directionsService, directionsRenderer);
   document.getElementById("mode").addEventListener("change", () => {
