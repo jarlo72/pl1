@@ -45,14 +45,14 @@ function calculateAndDisplayRoute(directionsService, directionsRenderer) {
 
   directionsService
     .route({
-      origin: "ChIJ816IxAb0K4gRYpbXJOgIt1Y",
-      destination: "ChIJp1-W86X0K4gR_GMElbM3KYQ",
+      origin: {"Shawerma Plus, Waterloo, ON"},
+      destination: {"Arabesque, Waterloo, ON"},
       // Note that Javascript allows us to access the constant
       // using square brackets and a string value as its
       // "property."
       waypoints: [
-        { location: "ChIJ325EafTzK4gR0GbMvhc3XTs" },
-        { location: "ChIJbXnSHSrzK4gRNvJAYl8_Rv8" },
+        { location: "Mozy's Shawarma, Waterloo, ON" },
+        { location: "Zay Zaman Restaurant, Waterloo, ON" },
       ],
       travelMode: google.maps.TravelMode[selectedMode],
     })
