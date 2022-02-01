@@ -1,41 +1,104 @@
 <!DOCTYPE html>
 <html>
-  <!-- The URL of this on GitHub pages will be https://jarlo72.github.io/pl1/story/story.html -->
   <head>
+    <!-- The URL of this on GitHub pages will be https://jarlo72.github.io/pl1/story/story.html -->
+    <!-- The idea of this webpage / map is to illustrate a road map of my favourite shawarma places in Waterloo, ON-->
+    <!-- It primarily uses direction services and info windows to describe a journey that was taken and shared with colleagues-->
+    <!-- The two main templates that were used from the Google Maps Javascript API are:-->
+    <!-- https://developers.google.com/maps/documentation/javascript/examples/directions-travel-modes#maps_directions_travel_modes-css-->
+    <!-- https://developers.google.com/maps/documentation/javascript/examples/infowindow-simple-max-->
+    
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="story.js"></script>
     <style>
-        /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
+
+        /* Setting map height to define the size of the div element that contains the map. */
+        /* And Makes the sample page fill entire window. */
+        /* From template https://developers.google.com/maps/documentation/javascript/examples/directions-travel-modes#maps_directions_travel_modes-css */
         #map {
         height: 100%;
         }
 
-        /* Optional: Makes the sample page fill the window. */
         html,
         body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+          }
+
+        /* Design edited from the sharkspotter template */
+        .row-container {
+          display: flex; 
+          width: 100%; 
+          height: 100%; 
+          flex-direction: column; 
+          overflow: hidden;
+          }
+
+        .first-row {
+          background-color: rgb(37, 37, 37); 
+          }
+
+        .second-row {
+          flex-grow: 1; 
+          border: none; 
+          margin: 0; 
+          padding: 0;
+          }
+
+        .tagline {
+            color: white;
+            text-align: center;
+            font-size: 15pt;
+            font-weight: bold;
+            padding-bottom: 0px;
         }
+
+        h1 {
+          margin: 10px;
+          color: orangered;
+          font-size: 30pt;
+          text-align: center;
+          }
+
+        #floating-panel { /* Referenced https://developers.google.com/maps/documentation/javascript/examples/directions-travel-modes#maps_directions_travel_modes-css */
+          position: absolute;
+          top: 155px;
+          left: 200px;
+          z-index: 5;
+          background-color: rgb(37, 37, 37);
+          padding: 5px;
+          border: 1px solid #999;
+          text-align: center;
+          font-family: "Roboto", "sans-serif";
+          color:  orangered; 
+          line-height: 30px;
+          padding-left: 10px;
+        }
+
     </style>
     
   </head>
 <body>
-  
-  <div id="floating-panel">
-      <b>Mode of Travel: </b>
-      <select id="mode">
-        <option value="DRIVING">Driving</option>
-        <option value="WALKING">Walking</option>
-        <option value="BICYCLING">Bicycling</option>
-      </select>
+  <div class="row-container">
+    <div class="first-row">
+      <h1>A Shawarma Road Map of Waterloo</h1>
+      <p class="tagline">"Drive, bike or walk! Whatever it takes to get there and sate that craving. Although exercise is always recommended..."</p>
     </div>
-  <div id="map"></div>
+
+    <div id="floating-panel">
+        <b>Mode of Travel: </b>
+        <select id="mode">
+          <option value="DRIVING">Driving</option>
+          <option value="WALKING">Walking</option>
+          <option value="BICYCLING">Bicycling</option>
+        </select>
+      </div>
+    <div id="map"></div>
+  </div>
   <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap&v=weekly"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE&callback=initMap&v=weekly"
     async>
   </script>
 </body>
-</html>
-
+</html
